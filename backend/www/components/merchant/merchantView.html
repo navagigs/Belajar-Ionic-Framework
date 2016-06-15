@@ -1,0 +1,52 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Management Merchants
+	</div>
+	<div class="table-responsive">
+		<table class="table table-responsive table-hover table-striped b-t b-b" datatable="ng">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Username</th>
+					<th>User Type</th>
+					<th>Registration Date</th>
+					
+					<!-- <th></th> -->
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="val in userList">
+					<td>
+						<a style="color:#2196f3" href="#/icard/user/detail/{{ val.id }}" title="" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+							{{ val.id }}
+						</a>
+					</td>
+					<td>{{ val.account }}</td>
+					<td>{{ val.accountType }}</td>
+					<td>{{ val.sex }}</td>
+					
+					<!-- <td>
+											<div class="btn-group" role="group">
+																	<button md-ink-ripple="" class="md-btn md-raised m-b btn-fw green waves-effect">
+																		<i class="fa fa-edit"></i>
+																	</button>
+																	<button md-ink-ripple="" class="md-btn md-raised m-b btn-fw red waves-effect">
+																		<i class="fa fa-trash"></i>
+																	</button>
+											</div>
+					</td> -->
+				</tr>
+			</tbody>
+			<tfoot>
+			<tr>
+				<th>ID</th>
+				<th>Username</th>
+				<th>User Type</th>
+				<th>Registration Date</th>
+				
+				<!-- <th></th> -->
+			</tr>
+			</tfoot>
+		</table>
+	</div>
+</div>

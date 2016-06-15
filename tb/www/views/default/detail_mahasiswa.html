@@ -1,0 +1,46 @@
+<ion-view view-title="{{ title }} ">
+		</ion-nav-back-button>
+		<ion-nav-button id="left">
+			<button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+			</button>
+		</ion-nav-buttons>
+	<ion-content class="bg-gray" ng-repeat="data in mahasiswa">    
+		<section class="detailmahasiswa">
+		 <div class="list card">  
+            <ion-item class="item-avatar item-icon-right" ng-repeat="data in filtered = (mahasiswa | filter:search.searchText | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" type="item-text-wrap" >
+                  <img src="http://localhost:8080/backend_ws/assets/images/mahasiswa/{{ data.mahasiswa_foto }}" width="600">
+    				  <table class="mahasiswa">
+					<tr>
+						<th class="text-gray-300">NPM : </th>
+						<td>{{ data.mahasiswa_npm }}</td>
+					</tr>
+					<tr>
+						<th class="text-gray-300">Nama Lengkap: </th>
+						<td>{{ data.mahasiswa_nama }}</td>
+					</tr>
+					<tr>
+						<th class="text-gray-300">Kelas</th>
+						<td>{{ data.kelas_nama }}</td>
+					</tr>
+					<tr>
+						<th class="text-gray-300">Alamat</th>
+						<td>{{ data.mahasiswa_alamat }}</td>
+					</tr>
+					<tr>
+						<th class="text-gray-300">Email</th>
+						<td>{{ data.mahasiswa_email }}</td>
+					</tr>
+					<tr>
+						<th class="text-gray-300">No.Telepon</th>
+						<td>{{ data.mahasiswa_tlp }}</td>
+					</tr>
+					<tr>
+						<th class="text-gray-300">Agama</th>
+						<td>{{ data.mahasiswa_agama }}</td>
+					</tr>
+				</table>
+     		</ion-item>
+    	</div>
+	</ion-content>
+
+</ion-view>

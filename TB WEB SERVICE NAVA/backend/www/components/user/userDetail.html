@@ -1,0 +1,100 @@
+<div class="row row-sm">
+  <div class="col-sm-12">
+    <div class="panel panel-card">
+      <div class="r-t pos-rlt" md-ink-ripple style="background:url(/assets/images/a0.jpg) center center; background-size:cover">
+        <div class="p-lg bg-white-overlay text-center r-t">
+          <a href class="w-xs inline">
+            <img src="/assets/images/a0.jpg" class="img-circle img-responsive">
+          </a>
+          <div class="m-b m-t-sm h2">
+            <span class="">Username</span>
+          </div>
+          <a class="btn btn-sm btn-success m-b p-h no-border" ng-show="isEdit != true" ng-click="editting()">Edit</a>
+          <a class="btn btn-sm btn-danger m-b p-h no-border" ng-show="isEdit" ng-click="cancelEdit()">Cancel Edit</a>
+          <p>
+            I am designing something.
+          </p>
+        </div>
+      </div>
+      <div class="list-group no-radius no-border" ng-show="isEdit != true">
+        
+        <a class="list-group-item">
+          <label class="pull-right">
+            <strong>ID</strong>
+          </label>
+          ID
+        </a>
+        <a class="list-group-item">
+          <label class="pull-right">
+            <strong>Username</strong>
+          </label>
+           Username
+        </a>
+        <a class="list-group-item">
+          <label class="pull-right">
+            <strong>Password</strong>
+          </label> Password
+        </a>
+        <a class="list-group-item">
+          <label class="pull-right">
+            <strong>Registration Date</strong>
+          </label> Registration Date
+        </a>
+      </div>
+
+      <div class="list-group no-radius no-border" ng-show="isEdit">
+        
+        
+        <a class="list-group-item">
+          <label class="">
+            <strong>Username</strong>
+          </label>
+           <input type="text" class="form-control" ng-model="user.username" />
+        </a>
+        <a class="list-group-item">
+          <label class="">
+            <strong>Old Password</strong>
+          </label> 
+          <input type="password" class="form-control" ng-model="user.oldPassword" />
+        </a>
+        <a class="list-group-item">
+          <label class="">
+            <strong>New Password</strong>
+          </label> 
+          <input type="password" class="form-control" ng-model="user.newPassword" />
+        </a>
+        
+      </div>
+      <!-- <div class="text-center b-b b-light">
+        <a href class="inline m text-color">
+          <span class="h3 block font-bold">221</span>
+          <em class="text-xs">Followers</em>
+        </a>
+        <a href class="inline m text-color">
+          <span class="h3 block font-bold">250</span>
+          <em class="text-xs">Following</em>
+        </a>
+      </div> -->
+      <div class="p" style="position:relative; overflow:hidden;">
+        <button data-toggle="modal" href='#user-modal-delete' type="" class="btn btn-danger pull-right">Delete <i class="fa fa-trash"></i></button>
+        
+        <a href="#/icard/user" type="" class="btn btn-default"><i class="fa fa-chevron-left"></i> Back </a>
+        <!-- <p>About</p>
+        <p>Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. </p>
+        <div class="m-v">
+          <a class="text-muted">
+            <i class="fa ui-icon fa-facebook"></i>
+          </a>
+          <a class="text-muted">
+            <i class="fa ui-icon fa-twitter"></i>
+          </a>
+          <a class="text-muted">
+            <i class="fa ui-icon fa-linkedin"></i>
+          </a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  
+</div>
+<modal-delete-user class="modal fade" id="user-modal-delete" data-id="001"></modal-delete-user>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo Portfolio | {{ title }}</title>
+    <meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="lib/assets/animate.css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="lib/assets/font-awesome/css/font-awesome.css" type="text/css" />
+    <link rel="stylesheet" href="lib/jquery/bootstrap/dist/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="lib/jquery/waves/dist/waves.css" type="text/css" />
+    <link rel="stylesheet" href="assets/styles/material-design-icons.css" type="text/css" />
+    <link rel="stylesheet" href="assets/styles/font.css" type="text/css" />
+    <link rel="stylesheet" href="assets/styles/app.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="libs/angular/datatables/media/css/dataTables.bootstrap.min.css">
+    <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+    <script src="lib/ionic/js/angular-ui-bootstrap/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script src="lib/ionic/js/angular-mocks/angular-mocks.js"></script>
+  </head>
+  <body ng-app="App">   
+      
+    <div class="app">
+      
+      <!-- aside -->
+      <aside id="aside" class="app-aside modal fade " role="menu">
+        <div class="left" ng-include="'shared/sidebar/sidebarView.html'"></div>
+      </aside>
+      <!-- / aside -->
+      <!-- content -->
+      <div id="content" class="app-content" role="main">
+        <div class="box">
+          <!-- Content Navbar -->
+          <div class="navbar md-whiteframe-z1 no-radius blue" ng-include="'shared/navbar/navbarView.html'"></div>
+          <!-- Content -->
+          <div class="box-row">
+            <div class="box-cell">
+              <div class="box-inner padding">
+                <div ui-view></div>
+              </div>
+            </div>
+          </div>
+          <!-- / -->
+        </div>
+      </div>
+      <!-- / content -->
+      <div class="modal fade" id="user" data-backdrop="false">
+        <div class="right w-xl bg-white md-whiteframe-z2">
+          <div class="box">
+            <div class="p p-h-md">
+              <a data-dismiss="modal" class="pull-right text-muted-lt text-2x m-t-n inline p-sm">&times;</a>
+              <strong>Members</strong>
+            </div>
+            <div class="box-row">
+              <div class="box-cell">
+                <div class="box-inner">
+                  <div class="list-group no-radius no-borders">
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <img src="assets/images/a1.jpg" class="pull-left w-40 m-r img-circle">
+                      <div class="clear">
+                        <span class="font-bold block">Jonathan Doe</span>
+                        <span class="clear text-ellipsis text-xs">"Hey, What's up"</span>
+                      </div>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <img src="assets/images/a2.jpg" class="pull-left w-40 m-r img-circle">
+                      <div class="clear">
+                        <span class="font-bold block">James Pill</span>
+                        <span class="clear text-ellipsis text-xs">"Lorem ipsum dolor sit amet onsectetur adipiscing elit"</span>
+                      </div>
+                    </a>
+                    <div class="p-h-md m-t p-v-xs">Work</div>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-success text-xs m-r-xs"></i>
+                      <span>Jonathan Morina</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-success text-xs m-r-xs"></i>
+                      <span>Mason Yarnell</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-warning text-xs m-r-xs"></i>
+                      <span>Mike Mcalidek</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i>
+                      <span>Cris Labiso</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i>
+                      <span>Daniel Sandvid</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i>
+                      <span>Helder Oliveira</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i>
+                      <span>Jeff Broderik</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i>
+                      <span>Daniel Sandvid</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i>
+                      <span>Helder Oliveira</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i>
+                      <span>Jeff Broderik</span>
+                    </a>
+                    <div class="p-h-md m-t p-v-xs">Partner</div>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-success text-xs m-r-xs"></i>
+                      <span>Mason Yarnell</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-warning text-xs m-r-xs"></i>
+                      <span>Mike Mcalidek</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i>
+                      <span>Cris Labiso</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i>
+                      <span>Jonathan Morina</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i>
+                      <span>Daniel Sandvid</span>
+                    </a>
+                    <a data-toggle="modal" data-target="#chat" data-dismiss="modal"  class="list-group-item p-h-md">
+                      <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i>
+                      <span>Helder Oliveira</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-h-md p-v">
+              <p>Invite People</p>
+              <a href class="text-muted"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+              <a href class="text-muted m-h"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="chat" data-backdrop="false">
+        <div class="right w-xxl bg-white md-whiteframe-z2">
+          <div class="box">
+            <div class="p p-h-md">
+              <a data-dismiss="modal" class="pull-right text-muted-lt text-2x m-t-n inline p-sm">&times;</a>
+              <strong>Chat</strong>
+            </div>
+            <div class="box-row bg-light lt">
+              <div class="box-cell">
+                <div class="box-inner">
+                  <div class="p-md">
+                    <div class="m-b">
+                      <a href class="pull-left w-40 m-r-sm"><img src="assets/images/a2.jpg" alt="..." class="w-full img-circle"></a>
+                      <div class="clear">
+                        <div class="p p-v-sm bg-warning inline r">
+                          Hi John, What's up...
+                        </div>
+                        <div class="text-muted-lt text-xs m-t-xs"><i class="fa fa-ok text-success"></i> 2 minutes ago</div>
+                      </div>
+                    </div>
+                    <div class="m-b">
+                      <a href class="pull-right w-40 m-l-sm"><img src="assets/images/a3.jpg" class="w-full img-circle" alt="..."></a>
+                      <div class="clear text-right">
+                        <div class="p p-v-sm bg-info inline text-left r">
+                          Lorem ipsum dolor soe rooke..
+                        </div>
+                        <div class="text-muted-lt text-xs m-t-xs">1 minutes ago</div>
+                      </div>
+                    </div>
+                    <div class="m-b">
+                      <a href class="pull-left w-40 m-r-sm"><img src="assets/images/a2.jpg" alt="..." class="w-full img-circle"></a>
+                      <div class="clear">
+                        <div class="p p-v-sm bg-warning inline r">
+                          Good!
+                        </div>
+                        <div class="text-muted-lt text-xs m-t-xs"><i class="fa fa-ok text-success"></i> 5 seconds ago</div>
+                      </div>
+                    </div>
+                    <div class="m-b">
+                      <a href class="pull-right w-40 m-l-sm"><img src="assets/images/a3.jpg" class="w-full img-circle" alt="..."></a>
+                      <div class="clear text-right">
+                        <div class="p p-v-sm bg-info inline text-left r">
+                          Dlor soe isep..
+                        </div>
+                        <div class="text-muted-lt text-xs m-t-xs">Just now</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-h-md p-v">
+              <a class="pull-left w-32 m-r"><img src="assets/images/a3.jpg" class="w-full img-circle" alt="..."></a>
+              <form>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Say something">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">SEND</button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+          <!-- End Content -->
+    <script src="lib/jquery/jquery/dist/jquery.js"></script>
+    <script src="lib/jquery/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/jquery/waves/dist/waves.js"></script>
+    <script src="lib/string/dist/string.min.js"></script>
+    <script src="assets/scripts/ui-load.js"></script>
+    <script src="assets/scripts/ui-jp.config.js"></script>
+    <script src="assets/scripts/ui-jp.js"></script>
+    <script src="assets/scripts/ui-nav.js"></script>
+    <script src="assets/scripts/ui-toggle.js"></script>
+    <script src="assets/scripts/ui-waves.js"></script>
+    <!-- datatable -->
+    <script type="text/javascript" src="lib/angular/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="lib/angular/datatables/media/js/dataTables.bootstrap.min.js"></script>
+    
+    <!-- end datatable -->
+    <!-- angular -->
+    <script type="text/javascript" src="lib/angular/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="lib/angular/ocLazyLoad/dist/ocLazyLoad.min.js"></script>
+    <script type="text/javascript" src="lib/angular/ngStorage/ngStorage.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-datatables/dist/angular-datatables.js"></script>
+    <script src="lib/ionic/js/angular-ui-bootstrap/ui-bootstrap-tpls-0.10.0.min.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/routers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="lib/ionic/js/angular-mocks/angular-mocks.js"></script>
+    <!-- end angular --> 
+</html>
